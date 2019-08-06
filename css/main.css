@@ -1273,9 +1273,9 @@ pre .javascript .function {
   border-bottom: 1px solid #0593d3;
 }
 .post-body p a:hover {
-  color: #fc6423;
+  color: #ee82ee;
   border-bottom: none;
-  border-bottom: 1px solid #fc6423;
+  border-bottom: 1px solid #ee82ee;
 }
 .posts-expand {
   padding-top: 40px;
@@ -1833,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6f8b;
+  background: #527fa6;
 }
 .links-of-blogroll {
   font-size: 13px;
