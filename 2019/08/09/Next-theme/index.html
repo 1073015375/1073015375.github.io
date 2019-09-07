@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_32px_579714_easyicon.net.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_32px_579714_easyicon.net.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_16px_579714_easyicon.net.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本教程参考了NexT官方中文文档以及收集了一些他人博客的内容，并加以整合。在文章下将依次标明地址。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-NexT安装和优化教程（持续更新～）">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/Next-theme/index.html">
+<meta property="og:site_name" content="Said, &quot;Baby, I just wanna dance&quot;">
+<meta property="og:description" content="本教程参考了NexT官方中文文档以及收集了一些他人博客的内容，并加以整合。在文章下将依次标明地址。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/23B9AA6A418DCB5006CBD74DFF25F421.png">
+<meta property="og:image" content="http://yoursite.com/images/D4484F077F74851714C77256315B4E52.png">
+<meta property="og:image" content="http://yoursite.com/images/4C33BED0CA743EED5E6211F4212F8BAA.png">
+<meta property="og:image" content="http://yoursite.com/images/7BF2564E8673EEF07BEED210D8E41122.png">
+<meta property="og:image" content="http://yoursite.com/images/3BA57E248A421E59361C8C2D0C263CFA.png">
+<meta property="og:image" content="http://yoursite.com/images/0C7D718E8FBEC487C5BB47F715A78DD5.png">
+<meta property="og:image" content="http://yoursite.com/images/718459A3D0A80A1588B875AF79EE6C6A.png">
+<meta property="og:image" content="http://yoursite.com/images/0C2812C370D9153460B870CED18B23A9.png">
+<meta property="og:image" content="http://yoursite.com/images/B8123F27BBBCCD88D658D9BA1F52D9B5.png">
+<meta property="og:image" content="http://yoursite.com/images/225DF69E2B0FD0701955CF0FB8819EA8.png">
+<meta property="og:image" content="http://yoursite.com/images/F5D9854F58D1ADF11BF9588D74AE08C4.png">
+<meta property="og:image" content="http://yoursite.com/images/5D97DAD67D66AFD7B8E05414131F126E.png">
+<meta property="og:image" content="http://yoursite.com/images/D6B0954174028F2BFE3C16C39873860C.png">
+<meta property="og:image" content="http://yoursite.com/images/CDFF3C77BDCFBFCA1819136E94162618.png">
+<meta property="og:image" content="http://yoursite.com/images/EE1D76424C72393EF4D9BAB014A23BB9.png">
+<meta property="og:image" content="http://yoursite.com/images/55ADCD23E9555F75A041DE5ED7EC7F70.png">
+<meta property="og:image" content="http://yoursite.com/images/AA391DEF5486EF7606E9C4904ED05DC4.png">
+<meta property="og:image" content="http://yoursite.com/images/A619BCAD8675AACD1563EE70757302A3.png">
+<meta property="og:image" content="http://img.tukexw.com/img/485cfceef046659e.jpg">
+<meta property="og:updated_time" content="2019-09-07T01:23:58.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo-NexT安装和优化教程（持续更新～）">
+<meta name="twitter:description" content="本教程参考了NexT官方中文文档以及收集了一些他人博客的内容，并加以整合。在文章下将依次标明地址。">
+<meta name="twitter:image" content="http://yoursite.com/images/23B9AA6A418DCB5006CBD74DFF25F421.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/09/Next-theme/">
+
+
+
+
+
+  <title>Hexo-NexT安装和优化教程（持续更新～） | Said, "Baby, I just wanna dance"</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?65ec3aa9728eefbd5b65c14b43d26895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Said, "Baby, I just wanna dance"</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/Next-theme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="章画志墨兮">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Said, " baby, i just wanna dance"">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo-NexT安装和优化教程（持续更新～）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T19:58:50+08:00">
+                2019-08-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/09/Next-theme/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/09/Next-theme/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/23B9AA6A418DCB5006CBD74DFF25F421.png" alt="23B9AA6A418DCB5006CBD74DFF25F421"></p>
+<p>本教程参考了<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT官方中文文档</a>以及收集了一些他人博客的内容，并加以整合。在文章下将依次标明地址。<br> <a id="more"></a></p>
+<h2 id="前排提醒"><a href="#前排提醒" class="headerlink" title="前排提醒"></a>前排提醒</h2><ol>
+<li><p>为了主题设置更加简便，推荐使用VS Code进行主题代码的更新<br><img src="/images/D4484F077F74851714C77256315B4E52.png" alt="D4484F077F74851714C77256315B4E52"></p>
+</li>
+<li><p>同时 Mac 终端输入<code>sudo su</code>进入root用户， Windows 管理员打开cmd进入root用户</p>
+</li>
+<li><p>修改/添加代码记得: 后面留一个空格，否则无法生效。<br>正确留白：<img src="/images/4C33BED0CA743EED5E6211F4212F8BAA.png" alt="4C33BED0CA743EED5E6211F4212F8BAA"><br>错误：<img src="/images/7BF2564E8673EEF07BEED210D8E41122.png" alt="7BF2564E8673EEF07BEED210D8E41122"></p>
+</li>
+</ol>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="config-yaml文件官方说明"><a href="#config-yaml文件官方说明" class="headerlink" title="_config.yaml文件官方说明"></a>_config.yaml文件官方说明</h2><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。</p>
+<p>为了描述方便，在以下说明中，将前者称为 <strong><em>站点配置文件</em></strong>， 后者称为 <strong><em>主题配置文件</em></strong>。</p>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h2><ol>
+<li><p>首先进入你的博客目录，如我的博客目录(blog)地址为<br>/Users/breidincasimi/blog<br><code>cd your-hexo-site</code></p>
+</li>
+<li><p>再输入<br><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+</li>
+<li><p>完成后，打开 <span style="background: Gainsboro;">站点配置文件_config.yaml</span>， 找到 theme 字段，并将其值更改为 next。<br><code>theme: next</code></p>
+</li>
+<li><p>验证主题<br>输入<code>hexo s</code>后可在浏览器访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>查看效果。</p>
+</li>
+</ol>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="Schemes三种主题"><a href="#Schemes三种主题" class="headerlink" title="Schemes三种主题"></a>Schemes三种主题</h2><p>在<span style="background: Gainsboro;">themes/next/_config.yaml</span>中的<span style="background: Gainsboro;">scheme</span>中选择自己喜欢的主题即可,如下所示。</p>
+<p><strong>Muse</strong>：<img src="/images/3BA57E248A421E59361C8C2D0C263CFA.png" alt="3BA57E248A421E59361C8C2D0C263CFA"><br><strong>Mist</strong>:<img src="/images/0C7D718E8FBEC487C5BB47F715A78DD5.png" alt="0C7D718E8FBEC487C5BB47F715A78DD5"><br><strong>Pisces</strong>(本人博客采用)：<br><img src="/images/718459A3D0A80A1588B875AF79EE6C6A.png" alt="718459A3D0A80A1588B875AF79EE6C6A"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="社交链接"><a href="#社交链接" class="headerlink" title="社交链接"></a>社交链接</h2><p>在<span style="background: Gainsboro;">themes/next/_config.yaml</span>中的<span style="background: Gainsboro;">social</span>填入社交链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/1073015375</span><br><span class="line">  csdn: https://blog.csdn.net/CasimiBreidin/article/details/98479038</span><br><span class="line">  Bilibili: https://space.bilibili.com/19412606</span><br></pre></td></tr></table></figure>
+
+<p>链接图标可去<a href="https://fontawesome.com/?from=io" target="_blank" rel="noopener">Font Awesome</a>找到。设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">social_icons:    </span><br><span class="line">  GitHub: github</span><br><span class="line">  csdn: crosshairs</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h2><p>在<span style="background: Gainsboro;">themes/next/_config.yaml</span>中的<span style="background: Gainsboro;">links</span>填入友情链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">links:</span><br><span class="line">  Baidu: http://lab.mkblog.cn/lmbtfy/</span><br><span class="line">  Google: http://www.google.com.hk</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h2><p>在<span style="background: Gainsboro;">themes/next/_config.yaml</span>中的<span style="background: Gainsboro;">Reward</span>添加支付宝/微信图片。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Reward</span><br><span class="line">reward_comment: 有趣的话给我一瓶肥宅快乐水吧～</span><br><span class="line">wechatpay: /images/wx.JPG</span><br><span class="line">alipay: /images/zfb.JPG</span><br><span class="line">bitcoin: #/images/dashang.png</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="Valine评论（推荐）"><a href="#Valine评论（推荐）" class="headerlink" title="Valine评论（推荐）"></a>Valine评论（推荐）</h2><ol>
+<li><p>注册LeanCloud并创建应用，名字可随便，选择开发版。<img src="/images/0C2812C370D9153460B870CED18B23A9.png" alt="0C2812C370D9153460B870CED18B23A9"></p>
+</li>
+<li><p>点击安全中心，在服务开关中，只打开数据储存。<img src="/images/B8123F27BBBCCD88D658D9BA1F52D9B5.png" alt="B8123F27BBBCCD88D658D9BA1F52D9B5"></p>
+</li>
+<li><p>在Web 安全域名中填入域名<img src="/images/225DF69E2B0FD0701955CF0FB8819EA8.png" alt="225DF69E2B0FD0701955CF0FB8819EA8"></p>
+</li>
+<li><p>在<span style="background: Gainsboro;">themes/next/_config.yaml</span>中的<span style="background: Gainsboro;">valine</span>中填写appid和appkey。    (别忘记把enable：false改为true)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true    # 打开valine评论功能</span><br><span class="line">  appid:         </span><br><span class="line">  appkey:        </span><br><span class="line">  notify: false   # 邮件提醒</span><br><span class="line">  verify: false   # 评论时是否有验证码，需要在Leancloud 设置-&gt;安全中心 中打开</span><br><span class="line">  placeholder: ～各位可以畅所欲言～ # 评论框默认显示</span><br><span class="line">  avatar: mm # 评论者的头像</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
+
+<p>其中appid和appkey在LeanCloud中的应用key获取。<img src="/images/F5D9854F58D1ADF11BF9588D74AE08C4.png" alt="F5D9854F58D1ADF11BF9588D74AE08"></p>
+</li>
+<li><p>配置CDN<br>点击<a href="https://cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/" target="_blank" rel="noopener">https://www.jsdelivr.com/package/npm/valine</a>获取最新的cdn地址：<img src="/images/5D97DAD67D66AFD7B8E05414131F126E.png" alt="5D97DAD67D66AFD7B8E05414131F126E"><br>后在<span style="background: Gainsboro;">themes/next/layout/_third-party/comments/valine.swig</span>将官方cdn<code>//unpkg.com/valine/dist/Valine.min.js</code>换成获取的cdn<code>//cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js</code></p>
+</li>
+<li><p>此时可以<code>hexo s</code>临时查看Valine是否成功出现！<img src="/images/D6B0954174028F2BFE3C16C39873860C.png" alt="D6B0954174028F2BFE3C16C39873860"></p>
+</li>
+</ol>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="动态背景"><a href="#动态背景" class="headerlink" title="动态背景"></a>动态背景</h2><p>进入<span style="background: Gainsboro;">themes/next/layout/_layout.swig</span>，在 <span style="background: Gainsboro;">&lt; /body&gt;</span>之前添加代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后在<span style="background: Gainsboro;">themes/next/_config.yml</span>中设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: true</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="文章内链接颜色"><a href="#文章内链接颜色" class="headerlink" title="文章内链接颜色"></a>文章内链接颜色</h2><p>在<span style="background: Gainsboro;">themes/next/source/css/_common/components/post/post.styl</span>中添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.post-body p a &#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注：其中颜色可自定义。</p>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="文章阴影"><a href="#文章阴影" class="headerlink" title="文章阴影"></a>文章阴影</h2><p>在<span style="background: Gainsboro;">themes/next/source/css/_custom/custom.styl</span>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">// 文章添加阴影</span><br><span class="line">.post &#123;</span><br><span class="line">   margin-top: 60px;</span><br><span class="line">   margin-bottom: 60px;</span><br><span class="line">   padding: 25px;</span><br><span class="line">   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/CDFF3C77BDCFBFCA1819136E94162618.png" alt="CDFF3C77BDCFBFCA1819136E94162618"></p>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="头像设置-翻转效果"><a href="#头像设置-翻转效果" class="headerlink" title="头像设置/翻转效果"></a>头像设置/翻转效果</h2><p>头像设置：找到<span style="background: Gainsboro;">themes/next/source/css/_custom/custom.styl</span>中的avatar，添加本地图片链接。<br>翻转效果：找到<span style="background: Gainsboro;">themes/next/source/css/_common/components/sidebar</span>中的<span style="background: Gainsboro;">sidebar-author.styl</span>将css样式内容全部替换为代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line"></span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  -webkit-border-radius: 50%;</span><br><span class="line">  -moz-border-radius: 50%;</span><br><span class="line">  transition: 1.4s all;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-author-image:hover &#123;</span><br><span class="line">    -webkit-transform: rotate(360deg);</span><br><span class="line">    -moz-transform: rotate(360deg);</span><br><span class="line">    -ms-transform: rotate(360deg);</span><br><span class="line">    -transform: rotate(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-author-name &#123;</span><br><span class="line">  margin: $site-author-name-margin;</span><br><span class="line">  text-align: $site-author-name-align;</span><br><span class="line">  color: $site-author-name-color;</span><br><span class="line">  font-weight: $site-author-name-weight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-description &#123;</span><br><span class="line">  margin-top: $site-description-margin-top;</span><br><span class="line">  text-align: $site-description-align;</span><br><span class="line">  font-size: $site-description-font-size;</span><br><span class="line">  color: $site-description-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="点击出现红心"><a href="#点击出现红心" class="headerlink" title="点击出现红心"></a>点击出现红心</h2><p>在<span style="background: Gainsboro;">themes/next/source/js/src</span>下新建文件 clicklove.js。并添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()</span><br><span class="line">&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: </span><br><span class="line">fixed;background: #f00;transform: </span><br><span class="line">rotate(45deg);-webkit-transform: </span><br><span class="line">rotate(45deg);-moz-transform: </span><br><span class="line">rotate(45deg);&#125;.heart:after,.heart:before&#123;con</span><br><span class="line">tent: &apos;&apos;;width: inherit;height: </span><br><span class="line">inherit;background: inherit;border-radius: </span><br><span class="line">50%;-webkit-border-radius: 50%;-moz-border-</span><br><span class="line">radius: 50%;position: </span><br><span class="line">fixed;&#125;.heart:after&#123;top: </span><br><span class="line">-5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;</span><br><span class="line">function r()&#123;for(var e=0;e&lt;d.length;e+</span><br><span class="line">+)d[e].alpha&lt;=0?</span><br><span class="line">(t.body.removeChild(d[e].el),d.splice(e,1)):</span><br><span class="line">(d[e].y--,d[e].scale+=.004,d[e].alpha-=.</span><br><span class="line">013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;</span><br><span class="line">top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;trans</span><br><span class="line">form:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) </span><br><span class="line">rotate(45deg);background:&quot;+d[e].color+&quot;;z-</span><br><span class="line">index:99999&quot;);requestAnimationFrame(r)&#125;</span><br><span class="line">function o()&#123;var t=&quot;function&quot;==typeof </span><br><span class="line">e.onclick&amp;&amp;e.onclick;e.onclick=function(e)</span><br><span class="line">&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var </span><br><span class="line">a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,</span><br><span class="line">d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scal</span><br><span class="line">e:1,alpha:</span><br><span class="line">1,color:s()&#125;),t.body.appendChild(a)&#125;function </span><br><span class="line">c(e)&#123;var </span><br><span class="line">a=t.createElement(&quot;style&quot;);a.type=&quot;text/</span><br><span class="line">css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;</span><br><span class="line">catch(t)&#123;a.styleSheet.cssText=e&#125;</span><br><span class="line">t.getElementsByTagName(&quot;head&quot;)</span><br><span class="line">[0].appendChild(a)&#125;function s()</span><br><span class="line">&#123;return&quot;rgb(&quot;+~~(255*Math.random())</span><br><span class="line">+&quot;,&quot;+~~(255*Math.random())</span><br><span class="line">+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var </span><br><span class="line">d=[];e.requestAnimationFrame=function()</span><br><span class="line">&#123;return e.requestAnimationFrame||</span><br><span class="line">e.webkitRequestAnimationFrame||</span><br><span class="line">e.mozRequestAnimationFrame||</span><br><span class="line">e.oRequestAnimationFrame||</span><br><span class="line">e.msRequestAnimationFrame||function(e)</span><br><span class="line">&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;</span><br><span class="line">(window,document);</span><br></pre></td></tr></table></figure>
+
+<p>找到<span style="background: Gainsboro;">themes/next/layout/_layout.swig</span>在末尾添加代码，用来引用clicklove.js。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="文章结束标记"><a href="#文章结束标记" class="headerlink" title="文章结束标记"></a>文章结束标记</h2><p>1 在<span style="background: Gainsboro;">themes/next/layout/_macro</span>中新建passage-end-tag.swig，并添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class=&quot;fa fa-paw&quot;&gt;&lt;/i&gt;感谢阅读-------------&lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2 在<span style="background: Gainsboro;">themes/next/layout/_macro/post.swig</span>中添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &apos;passage-end-tag.swig&apos; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3 在<span style="background: Gainsboro;">themes/_config.yaml</span>末尾添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="安装Live2d-看板娘"><a href="#安装Live2d-看板娘" class="headerlink" title="安装Live2d 看板娘"></a>安装Live2d 看板娘</h2><p>1.安装hexo-helper-live2d –save文件</p>
+<ul>
+<li>在博客根目录输入<code>npm install hexo-helper-live2d --save</code></li>
+<li>若安装失败，Windows可在git bash安装，Mac可输入<code>cnpm install hexo-helper-live2d --save</code></li>
+<li><del>比如我安装所有插件只能使用cnpm而非npm，原因未知._.</del><br>2.在站点配置文件_config.yaml中（非themes/_config.yaml的！）添加代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    # 填写你所需要的看板娘名称</span><br><span class="line">    use: live2d-widget-model-tororo</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+
+<p>其中看板娘可在<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892" target="_blank" rel="noopener">https://blog.csdn.net/wang_123_zy/article/details/87181892</a>预览或者点击<a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">这里查看官方</a>。</p>
+<p>3.安装看板娘所需文件<br>输入<code>npm install live2d-widget-model-name</code>，其中<span style="background: Gainsboro;">name</span>为你选择的看板娘名字，如<code>npm install live2d-widget-model-tororo</code>，保存后可输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>可先在本地网址预览。<img src="/images/EE1D76424C72393EF4D9BAB014A23BB9.png" alt="EE1D76424C72393EF4D9BAB014A23BB9"></p>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="Fork-me-on-github"><a href="#Fork-me-on-github" class="headerlink" title="Fork me on github"></a>Fork me on github</h2><p><img src="/images/55ADCD23E9555F75A041DE5ED7EC7F70.png" alt="55ADCD23E9555F75A041DE5ED7EC7F70"></p>
+<p>1 点击<a href="https://github.blog/2008-12-19-github-ribbons/" target="_blank" rel="noopener">这里</a>选择样式。</p>
+<p>如这里我选择黑色样式，复制右边原代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://github.com/you&quot;&gt;&lt;img </span><br><span class="line">width=&quot;149&quot; height=&quot;149&quot; src=&quot;https://</span><br><span class="line">github.blog/wp-content/uploads/2008/12/</span><br><span class="line">forkme_right_darkblue_121621.png?</span><br><span class="line">resize=149%2C149&quot; class=&quot;attachment-full </span><br><span class="line">size-full&quot; alt=&quot;Fork me on GitHub&quot; data-</span><br><span class="line">recalc-dims=&quot;1&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2 将<span style="background: Gainsboro;">代码段开头的<a href="https://github.com/you" target="_blank" rel="noopener">https://github.com/you</a></span>换成自己的github链接。</p>
+<p>3 找到<span style="background: Gainsboro;">themes/next/layout/_layout.swig</span>，向里面添加上面所改后的代码段，并放在<span style="background: Gainsboro;">&lt; div class=”headband”&gt;的下面 </span>。</p>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><ol>
+<li><p>登录<a href="https://tongji.baidu.com/web/welcome/login" target="_blank" rel="noopener">百度统计</a>， 定位到站点的代码获取页面.</p>
+</li>
+<li><p>在网站列表中添加博客域名，如图：<img src="/images/AA391DEF5486EF7606E9C4904ED05DC4.png" alt="AA391DEF5486EF7606E9C4904ED05D"></p>
+</li>
+<li><p>在代码获取中复制hm.js?后面那串统计脚本 id。<br> 注：复制的id即为<span style="background: Gainsboro;">baidu_analytics</span>。<br><img src="/images/A619BCAD8675AACD1563EE70757302A3.png" alt="A619BCAD8675AACD1563EE70757302A3"></p>
+</li>
+<li><p>在<span style="background: Gainsboro;">themes/_config.yaml</span>中找到<span style="background: Gainsboro;">baidu_analytics</span>。并将获取的id填上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Baidu Analytics ID</span><br><span class="line">baidu_analytics: 65exxxxxxxxxxxxxxxxxxxxxxxxxx895</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h2 id="感谢链接（一些博客很值得订阅）"><a href="#感谢链接（一些博客很值得订阅）" class="headerlink" title="感谢链接（一些博客很值得订阅）"></a>感谢链接（一些博客很值得订阅）</h2><ol>
+<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></li>
+<li><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">https://www.simon96.online/2018/10/12/hexo-tutorial/</a></li>
+<li><a href="http://www.dragonbaby308.com/hexo-theme-next/" target="_blank" rel="noopener">http://www.dragonbaby308.com/hexo-theme-next/</a></li>
+<li><a href="https://www.cnblogs.com/php-linux/p/8416122.html" target="_blank" rel="noopener">https://www.cnblogs.com/php-linux/p/8416122.html</a></li>
+<li><a href="https://www.jianshu.com/p/b20fc983005f" target="_blank" rel="noopener">https://www.jianshu.com/p/b20fc983005f</a></li>
+<li><a href="https://blog.csdn.net/jiunian_2761/article/details/97388997#3_Hexo_Next_32" target="_blank" rel="noopener">https://blog.csdn.net/jiunian_2761/article/details/97388997#3_Hexo_Next_32</a></li>
+<li><a href="https://blog.csdn.net/qq_33699981/article/details/60330891" target="_blank" rel="noopener">https://blog.csdn.net/qq_33699981/article/details/60330891</a></li>
+<li><a href="http://sunhome.online/2019/02/01/Valine评论头像以及显示失败处理方法/#more" target="_blank" rel="noopener">http://sunhome.online/2019/02/01/Valine评论头像以及显示失败处理方法/#more</a></li>
+</ol>
+<p>持续更新～<br><img src="http://img.tukexw.com/img/485cfceef046659e.jpg" alt="http://img.tukexw.com/img/485cfceef046659e.jpg"> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>有趣的话给我一瓶肥宅快乐水吧～</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wx.JPG" alt="章画志墨兮 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zfb.JPG" alt="章画志墨兮 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/01/firstpost/" rel="next" title="首篇：建立博客有感及未来发展">
+                <i class="fa fa-chevron-left"></i> 首篇：建立博客有感及未来发展
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/18/javanodes/" rel="prev" title="笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答">
+                笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">章画志墨兮</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/1073015375" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/CasimiBreidin/article/details/98479038" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-globe"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/19412606" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Bilibili</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://lab.mkblog.cn/lmbtfy/" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.google.com.hk" title="Google" target="_blank">Google</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前排提醒"><span class="nav-number">1.</span> <span class="nav-text">前排提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-yaml文件官方说明"><span class="nav-number">2.</span> <span class="nav-text">_config.yaml文件官方说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装NexT主题"><span class="nav-number">3.</span> <span class="nav-text">安装NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Schemes三种主题"><span class="nav-number">4.</span> <span class="nav-text">Schemes三种主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#社交链接"><span class="nav-number">5.</span> <span class="nav-text">社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#友情链接"><span class="nav-number">6.</span> <span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打赏"><span class="nav-number">7.</span> <span class="nav-text">打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valine评论（推荐）"><span class="nav-number">8.</span> <span class="nav-text">Valine评论（推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态背景"><span class="nav-number">9.</span> <span class="nav-text">动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章内链接颜色"><span class="nav-number">10.</span> <span class="nav-text">文章内链接颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章阴影"><span class="nav-number">11.</span> <span class="nav-text">文章阴影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置-翻转效果"><span class="nav-number">12.</span> <span class="nav-text">头像设置/翻转效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现红心"><span class="nav-number">13.</span> <span class="nav-text">点击出现红心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章结束标记"><span class="nav-number">14.</span> <span class="nav-text">文章结束标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Live2d-看板娘"><span class="nav-number">15.</span> <span class="nav-text">安装Live2d 看板娘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fork-me-on-github"><span class="nav-number">16.</span> <span class="nav-text">Fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度统计"><span class="nav-number">17.</span> <span class="nav-text">百度统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢链接（一些博客很值得订阅）"><span class="nav-number">18.</span> <span class="nav-text">感谢链接（一些博客很值得订阅）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me
+/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">章画志墨兮</span>
+
+  
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Sometimes your whole life boils down to one insame move.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2019 08:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">  博客全篇共4.3k字</span>
+</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'FaBe36nKfweh1a6lUbUz4dE0-gzGzoHsz',
+        appKey: 'bRuyBMR80WBVsNvTsY1fULYr',
+        placeholder: '～各位可以畅所欲言～',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>

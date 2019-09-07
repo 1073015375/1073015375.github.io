@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_32px_579714_easyicon.net.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_32px_579714_easyicon.net.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_16px_579714_easyicon.net.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本书课后习题多而精，故选取有代表意义的习题，由此记录每道题学到的知识。纯新手向，从中学到的知识有简单有新奇。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答">
+<meta property="og:url" content="http://yoursite.com/2019/08/18/javanodes/index.html">
+<meta property="og:site_name" content="Said, &quot;Baby, I just wanna dance&quot;">
+<meta property="og:description" content="本书课后习题多而精，故选取有代表意义的习题，由此记录每道题学到的知识。纯新手向，从中学到的知识有简单有新奇。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/1073015375/PicGo/master/img/0F002381-FACB-48C8-A220-0128369BC136.png">
+<meta property="og:updated_time" content="2019-09-07T01:33:27.233Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答">
+<meta name="twitter:description" content="本书课后习题多而精，故选取有代表意义的习题，由此记录每道题学到的知识。纯新手向，从中学到的知识有简单有新奇。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/1073015375/PicGo/master/img/0F002381-FACB-48C8-A220-0128369BC136.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/18/javanodes/">
+
+
+
+
+
+  <title>笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答 | Said, "Baby, I just wanna dance"</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?65ec3aa9728eefbd5b65c14b43d26895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Said, "Baby, I just wanna dance"</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/18/javanodes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="章画志墨兮">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Said, " baby, i just wanna dance"">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">笔记《JAVA语言程序设计与数据结构（基础篇）》部分习题解答</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T09:45:23+08:00">
+                2019-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/18/javanodes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/18/javanodes/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  817
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://raw.githubusercontent.com/1073015375/PicGo/master/img/0F002381-FACB-48C8-A220-0128369BC136.png" alt><br> 本书课后习题多而精，故选取有代表意义的习题，由此记录每道题学到的知识。纯新手向，从中学到的知识有简单有新奇。</p>
+<a id="more"></a>
+
+<h3 id="第十三章-抽象类和接口"><a href="#第十三章-抽象类和接口" class="headerlink" title="第十三章 抽象类和接口"></a>第十三章 抽象类和接口</h3><h4 id="13-17"><a href="#13-17" class="headerlink" title="*13.17"></a>*13.17</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * \* Program: Complex class  *13.17</span><br><span class="line"> * \* User: breidincasimi</span><br><span class="line"> * \* Date: 2019-08-14</span><br><span class="line"> * \* Time: 09:45</span><br><span class="line"> * \* Description: 复数的四则运算和绝对值</span><br><span class="line"> */</span><br><span class="line">public class Complex &#123;</span><br><span class="line">    public double a;</span><br><span class="line">    public double b;</span><br><span class="line"></span><br><span class="line">    public Complex() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Complex(double a, double b) &#123;</span><br><span class="line">        this.a = a;</span><br><span class="line">        this.b = b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Complex(double a) &#123;</span><br><span class="line">        this.a = a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 返回复数的实部</span><br><span class="line">    public double getRealPart() &#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    // 返回复数的虚部</span><br><span class="line">    public double getImaginaryPart() &#123;</span><br><span class="line">        return this.b;</span><br><span class="line">    &#125;</span><br><span class="line">    //2个复数的相 加</span><br><span class="line">    public void add(Complex other) &#123;</span><br><span class="line">        double real = this.a + other.a;</span><br><span class="line">        double imaginary = this.b + other.b;</span><br><span class="line">        System.out.print(&quot;(&quot;+this.a+&quot; + &quot;+this.b+&quot;) + (&quot;+other.a+&quot; + &quot;+other.b+&quot;) = &quot;);</span><br><span class="line">        System.out.println(real + &quot; + &quot; + imaginary + &quot;i&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //2个复数的相 减</span><br><span class="line">    public void subtract(Complex other) &#123;</span><br><span class="line">        double real = this.a - other.a;</span><br><span class="line">        double imaginary = this.b - other.b;</span><br><span class="line">        System.out.print(&quot;(&quot;+this.a+&quot; + &quot;+this.b+&quot;) - (&quot;+other.a+&quot; + &quot;+other.b+&quot;) = &quot;);</span><br><span class="line">        System.out.println(real + &quot; + &quot; + imaginary + &quot;i&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //2个复数的相 乘</span><br><span class="line">    public void multiply(Complex other) &#123;</span><br><span class="line">        double real = (this.a * other.a) - (this.b * other.b);</span><br><span class="line">        double imaginary = (this.b * other.a) + (this.a * other.b);</span><br><span class="line">        System.out.print(&quot;(&quot;+this.a+&quot; + &quot;+this.b+&quot;) * (&quot;+other.a+&quot; + &quot;+other.b+&quot;) = &quot;);</span><br><span class="line">        System.out.println(real + &quot; + &quot; + imaginary + &quot;i&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //2个复数的相 除</span><br><span class="line">    public void divide(Complex other) &#123;</span><br><span class="line">        double fm = (other.a * other.a) + (other.b * other.b);</span><br><span class="line">        double real = ((this.a * other.a) + (this.b * other.b)) / fm;</span><br><span class="line">        double imaginary = ((this.b * other.a) - (this.a * other.b)) / fm;</span><br><span class="line">        System.out.print(&quot;(&quot;+this.a+&quot; + &quot;+this.b+&quot;) / (&quot;+other.a+&quot; + &quot;+other.b+&quot;) = &quot;);</span><br><span class="line">        System.out.println(real + &quot; + &quot; + imaginary + &quot;i&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //返回复数的绝对值</span><br><span class="line">    public static void abs(Complex other) &#123;</span><br><span class="line">        double fz = (other.a * other.a) + (other.b * other.b);</span><br><span class="line">        System.out.print(&quot;|(&quot;+other.a+&quot; + &quot;+other.b+&quot;)| = &quot;);</span><br><span class="line">        System.out.println(Math.sqrt(fz));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line">        //分别输入两个复数</span><br><span class="line">        System.out.print(&quot;Enter the first complex number: &quot;);</span><br><span class="line">        Complex p1 = new Complex(input.nextDouble(),input.nextDouble());</span><br><span class="line">        System.out.print(&quot;Enter the second complex number: &quot;);</span><br><span class="line">        Complex p2 = new Complex(input.nextDouble(),input.nextDouble());</span><br><span class="line">        //调用方法</span><br><span class="line">        p1.add(p2);</span><br><span class="line">        p1.subtract(p2);</span><br><span class="line">        p1.multiply(p2);</span><br><span class="line">        p1.divide(p2);</span><br><span class="line">        abs(p1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="笔记：由相加的方法（public-void-add-Complex-other-）可以看出，可以传入Complex（本类）类的参数。由此可通过this-和参数-来比较。即为（Complex-other），而非开始想到的这种（double-c-double-d，然后通过this-a和c比较，这种太麻烦了"><a href="#笔记：由相加的方法（public-void-add-Complex-other-）可以看出，可以传入Complex（本类）类的参数。由此可通过this-和参数-来比较。即为（Complex-other），而非开始想到的这种（double-c-double-d，然后通过this-a和c比较，这种太麻烦了" class="headerlink" title="笔记：由相加的方法（public void add(Complex other)）可以看出，可以传入Complex（本类）类的参数。由此可通过this.和参数.来比较。即为（Complex other），而非开始想到的这种（double c,double d，然后通过this.a和c比较，这种太麻烦了"></a><em>笔记</em>：由相加的方法（public void add(Complex other)）可以看出，可以传入Complex（本类）类的参数。由此可通过this.和参数.来比较。即为（Complex other），而非开始想到的这种（double c,double d，然后通过this.a和c比较，这种太麻烦了</h4><hr align="center" width="color=#9DB3B3" size="1.5">
+
+<h3 id="第十二章-异常处理和文本I-O-（3个-）"><a href="#第十二章-异常处理和文本I-O-（3个-）" class="headerlink" title="第十二章 异常处理和文本I/O （3个#）"></a>第十二章 异常处理和文本I/O （3个#）</h3><h4 id="12-2-（4个-）"><a href="#12-2-（4个-）" class="headerlink" title="*12.2 （4个#）"></a>*12.2 （4个#）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">/**</span><br><span class="line"> * \* Program: InputMismatchException异常 *12.2</span><br><span class="line"> * \* User: casimibreidin</span><br><span class="line"> * \* Date: 2019-08-15</span><br><span class="line"> * \* Time: 10:08</span><br><span class="line"> * \* Description: 编写一个程序，提示用户读取两个整数，然后显示它们的和。程序应该在输入不正确时</span><br><span class="line"> * 提醒用户再次读取整数。</span><br><span class="line"> */</span><br><span class="line">public class InputMismatchException &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line">        boolean hh = true;</span><br><span class="line">        while (hh) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line"></span><br><span class="line">                System.out.println(&quot;Enter two of number : &quot;);</span><br><span class="line">                int a = input.nextInt();</span><br><span class="line">                int b = input.nextInt();</span><br><span class="line">                int c = a + b;</span><br><span class="line">                System.out.println(&quot;sum : &quot; + c);</span><br><span class="line">                hh = false;</span><br><span class="line">            &#125; catch (java.util.InputMismatchException e) &#123; //异常和Class重名了，故用此写法</span><br><span class="line">                System.out.println(&quot;InputMismatchException!&quot;);</span><br><span class="line">                input.nextLine();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="笔记：可在try…catch…中套一个while-true-，这样当出现异常后-本题的InputMismatchException-可以再次输入，避免只允许一次的情况。"><a href="#笔记：可在try…catch…中套一个while-true-，这样当出现异常后-本题的InputMismatchException-可以再次输入，避免只允许一次的情况。" class="headerlink" title="笔记：可在try…catch…中套一个while(true){}，这样当出现异常后(本题的InputMismatchException)可以再次输入，避免只允许一次的情况。"></a><em>笔记</em>：可在try…catch…中套一个while(true){}，这样当出现异常后(本题的InputMismatchException)可以再次输入，避免只允许一次的情况。</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>有趣的话给我一瓶肥宅快乐水吧～</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wx.JPG" alt="章画志墨兮 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zfb.JPG" alt="章画志墨兮 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/09/Next-theme/" rel="next" title="Hexo-NexT安装和优化教程（持续更新～）">
+                <i class="fa fa-chevron-left"></i> Hexo-NexT安装和优化教程（持续更新～）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/06/jdk-and-software/" rel="prev" title="java环境配置以及软件下载（eclipse或idea）详细教程">
+                java环境配置以及软件下载（eclipse或idea）详细教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">章画志墨兮</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/1073015375" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/CasimiBreidin/article/details/98479038" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-globe"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/19412606" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Bilibili</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://lab.mkblog.cn/lmbtfy/" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.google.com.hk" title="Google" target="_blank">Google</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第十三章-抽象类和接口"><span class="nav-number">1.</span> <span class="nav-text">第十三章 抽象类和接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#13-17"><span class="nav-number">1.1.</span> <span class="nav-text">*13.17</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#笔记：由相加的方法（public-void-add-Complex-other-）可以看出，可以传入Complex（本类）类的参数。由此可通过this-和参数-来比较。即为（Complex-other），而非开始想到的这种（double-c-double-d，然后通过this-a和c比较，这种太麻烦了"><span class="nav-number">1.2.</span> <span class="nav-text">笔记：由相加的方法（public void add(Complex other)）可以看出，可以传入Complex（本类）类的参数。由此可通过this.和参数.来比较。即为（Complex other），而非开始想到的这种（double c,double d，然后通过this.a和c比较，这种太麻烦了</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十二章-异常处理和文本I-O-（3个-）"><span class="nav-number">2.</span> <span class="nav-text">第十二章 异常处理和文本I/O （3个#）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-2-（4个-）"><span class="nav-number">2.1.</span> <span class="nav-text">*12.2 （4个#）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#笔记：可在try…catch…中套一个while-true-，这样当出现异常后-本题的InputMismatchException-可以再次输入，避免只允许一次的情况。"><span class="nav-number">2.2.</span> <span class="nav-text">笔记：可在try…catch…中套一个while(true){}，这样当出现异常后(本题的InputMismatchException)可以再次输入，避免只允许一次的情况。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me
+/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">章画志墨兮</span>
+
+  
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Sometimes your whole life boils down to one insame move.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2019 08:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">  博客全篇共4.3k字</span>
+</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'FaBe36nKfweh1a6lUbUz4dE0-gzGzoHsz',
+        appKey: 'bRuyBMR80WBVsNvTsY1fULYr',
+        placeholder: '～各位可以畅所欲言～',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
