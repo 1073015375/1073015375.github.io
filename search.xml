@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PicGo+GitHub-一款方便的图床工具]]></title>
+    <url>%2F2019%2F09%2F09%2FPicGo%2F</url>
+    <content type="text"><![CDATA[PicGo目前可谓最为流行的图床工具，本教程包含PicGo关联你的GitHub（其它服务器也可，详细请点击阅读） PicGo介绍文字说明PicGo一个多功能、便捷、且持续更新图床工具。Picgo可以关联到你的图片上传的服务器/网站上，这样不登录网站就可以快速生成图片的网站格式！本教程服务器使用GitHub，方便快捷，不用担心服务器的关闭或者不稳定因素。 同时，PicGo支持以下： PicGo在上传图片之后自动会将图片链接复制到你的剪贴板里，可选5种复制的链接格式。 PicGo目前支持了 微博图床 v1.0 七牛图床 v1.0 腾讯云COS v4\v5版本 v1.1 &amp; v1.5.0 又拍云 v1.2.0 GitHub v1.5.0 SM.MS v1.5.1 阿里云OSS v1.6.0 Imgur v1.6.0 本体不再增加默认的图床支持。你可以自行开发第三方图床插件。 支持macOS、windows 64位（&gt;= v1.3.1），linux（&gt;= v1.6.0）。 PicGo同样支持动态图片，一键拖拽即可，方便快捷～ 图片说明 PicGo下载安装macOS用户请下载最新版本的dmg文件，windows用户请下载最新版本的exe文件，linux用户请下载AppImage文件。 点击此处下载应用。 如果你是Arch类的Linux用户，可以直接通过aurman -S picgo-appimage来安装PicGo。感谢@houbaron的贡献！ ​ ————————转自PicGo官方文档 GitHub部署依次点击New→Create repository→Settings→Developer settings→Personal access tokens→Generate new token→Generate token，如下图所示： 注：本图中，Note为描述，可随意填写。同时钩上repo即可创建。 复制tokens，注意 tokens 只出现一次，刷新后需重新创建。 PicGo设置 如图: 仓库名格式：账号名/仓库名 分支： master Token ：上面操作你所复制的tokens 存储路径：img/ 这个为在GitHub中储存图片的路径 自定义域名：https://raw.githubusercontent.com/账号名/PicGo/分支名 如我设置为` https://raw.githubusercontent.com/1073015375/PicGo/master` PicGo部分设置： 后言至此，GitHub仓库和PicGo已经关联，只需把图片投入PicGo即可使用～ 有何疑问可在下面评论留言，或QQ联系～]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[PanDownload介绍]]></title>
     <url>%2F2019%2F09%2F08%2FPanDownload%2F</url>
     <content type="text"><![CDATA[百度网盘几十kb/s?会员也没用？试试这个！专门用于下载百度网盘的文件。 PanDownload介绍PanDownload可以下载任何的百度网盘中的文件，有电脑版，安卓版，网页版（推荐）基本不会限速。 亲测百度网盘上的几十kb/s，在网页版中有几m/s的速度！ 网页版网页版不用下载任何东西就可下载文件，推荐。 网页地址为：PanDownload网页版 如果有多p文件下载，可以使用电脑版进行下载，操作方便。&lt;HR align=center width= color=#9DB3B3 SIZE=1.5&gt; 其他版本偷点懒，你可以直接去Pandownload官网进行下载。 后言不知道电脑版怎么用？电脑版功能有什么呢？使用时遇到了问题？ 欢迎你去Pandownload官网查询，方便快捷！ Pandownload官网目录预览 使用说明 1.1. 账号登录 1.2. 文件下载 1.3. 打开分享链接 1.4. 在线解压 1.5. 离线下载 1.6. 新番下载 1.7. 远程下载 1.8. 设置 常见问题 2.1. 连接服务器失败 2.2. 初始化下载引擎失败 2.3. 初始化脚本失败 2.4. 无法登录网盘账号 2.5. 下载失败，出现错误 2.6. 下载速度慢，账号被限速 2.7. 怎么设置代理 2.8. 使用cookie登录网盘账号 2.9. 安装扩展脚本 2.10. 修改浏览器UA 2.11. 交流反馈 你可以先在这里预览界面，看是否有所需求。]]></content>
