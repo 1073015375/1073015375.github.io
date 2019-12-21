@@ -115,6 +115,91 @@
       </tags>
   </entry>
   <entry>
+    <title>数据库原理</title>
+    <url>/bi-ji/sjk/</url>
+    <content><![CDATA[<p>安卓课上讲的数据库基本操作</p>
+<a id="more"></a>
+
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>主要用“表”来储存：行、列</p>
+<p>学生表（学号，姓名，性别，出生日期等都是一列）</p>
+<p>主流：“SQL“ 语言</p>
+<p>表： 创建 增，删，</p>
+<pre><code># 创建
+create table tb_user(id integer primary key not null,username varchar (20),password char(6))
+#插入
+insert into tb_user(id,username,password)   
+              values(1,&quot;admin&quot;,&quot;123456&quot;)    #一一对应
+Or
+
+insert into tb_user values(1,&quot;admin&quot;,&quot;123456&quot;)
+
+# 修改
+update tb_user set password=&quot;666666&quot;
+#修改条件  where 
+where id=2;                                #修改id为2的密码为“666666”
+#删除
+delete from tb_user where id=1;            #删除id=1的
+
+# 单表查询
+#查询用户表中的全部用户（不设条件）
+select id,username,passrord from tb_user
+#如果查询的是表中全部字段的值，可以用“*”代替字段列表
+select * from tb_user
+#查询用户表中所有用户的用户和密码
+select username,password from tb_user
+
+#查询所有单价超过20元的图书的信息（设条件）
+select * from tb_books where book_price&gt;20
+#查询所有以“java”开头的图书的信息
+select * from tb_books where book_name like &quot;java%&quot; 
+#查询条件：名字中间带“文” 的用户
+select * from tb_user where username like &quot;%文%&quot;  
+#查询叫“XX鹏”的男同学
+select * from tb_student where name like &quot;%鹏&quot; and sex=&#39;男&#39;
+#查询学生表中通信专业和软件工程专业的学生信息
+select * from tb_student where  major=&quot;通信专业&quot; or major=&quot;软件工程专业&quot; and sex=&quot;男&quot;
+select * from tb_student where  in(&quot;通信专业&quot;,&quot;软件工程专业&quot;) and sex=&quot;男&quot;
+
+#多表查询
+tb_user(id,username,password)                                #用户表
+tb_user_details(id,name,nickname,sex,phone,qq,email,dept_id) #用户详情表
+tb_dept(dept_id,dept_name,dept_major,dept_telephone)         #该用户部门
+#查询用户名为admin的用户全部信息(三张表的连接查询)
+select id,username,name,nickname,sex,phone,qq,email,dept_name from tb_user,tb_user_details,tb_dept where tb_user.id=tb_user_details.dept_id and tb_user_datails.dept_id=tb_dept.dept_id and username=&quot;admin&quot;
+#所有男同志所在的部门
+select dept_name from tb_user_details,tb_dept where tb_user_details.sex=&quot;男&quot; and tb_user_details.dept_id=tb_dept.dept_id</code></pre><p>图书表：bookId or book_Id.   book_name,book_auther,book_publisher,book_price</p>
+<pre><code>create table tb_books(book_id int(4) not null primary key,
+​                     book_name varchar(50),
+​                     book_author varchar(20),
+​                     book_publisher varchar(50),
+​                     book_price double(6,2),        #6：长度 2:保留小数点后两位数
+                      book_memo text(2000))     
+insert into tb_books(book_id,book_name,book_author,book_publisher,book_price)
+values(1001,&quot;Java程序设计&quot;,&quot;张三&quot;,&quot;清华大学出版社&quot;,35.50)
+
+update tb_books set book_author=&quot;张三丰&quot;
+where book_id=1001;    
+
+delete from tb_books where book_id=1001;            
+
+
+
+</code></pre><ol>
+<li>建立一个数据库</li>
+<li>建两个表tb_user,tb_user_detail</li>
+<li>写一个API访问接口类，在该类中实现增，删，改，查tb_user</li>
+</ol>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2>]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>note</tag>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PicGo+GitHub-一款方便的图床工具</title>
     <url>/software/picgo/</url>
     <content><![CDATA[<p>PicGo目前可谓最为流行的图床工具，本教程包含PicGo关联你的GitHub（其它服务器也可，详细请点击阅读）</p>

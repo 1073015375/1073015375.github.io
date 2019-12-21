@@ -4,18 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="首篇：建立博客有感及未来发展, Lover">
-    <meta name="description" content="My heart’s been borrowed.And yours has been blue.All’s well that ends well.To end up with you.
- 
-
-本片目录
+    <meta name="keywords" content="数据库原理, Lover">
+    <meta name="description" content="安卓课上讲的数据库基本操作
 
 
-前言
-
-博客意义 
-
-所需工具">
+一主要用“表”来储存：行、列
+学生表（学号，姓名，性别，出生日期等都是一列）
+主流：“SQL“ 语言
+表： 创建 增，删，
+# 创建
+create table tb_user(id integer prima">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>首篇：建立博客有感及未来发展 | Lover</title>
+    <title>数据库原理 | Lover</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,13 +295,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        首篇：建立博客有感及未来发展
+                        数据库原理
                     </div>
                 </div>
             </div>
@@ -400,6 +398,14 @@
                                 <span class="chip bg-color">Markdown</span>
                             </a>
                         
+                            <a href="/tags/note/" target="_blank">
+                                <span class="chip bg-color">note</span>
+                            </a>
+                        
+                            <a href="/tags/Mysql/" target="_blank">
+                                <span class="chip bg-color">Mysql</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -408,8 +414,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                Markdown
+                            <a href="/categories/笔记/" class="post-category" target="_blank">
+                                笔记
                             </a>
                         
                     </div>
@@ -420,21 +426,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-01
+                    2019-11-02
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        493
+                        622
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -450,78 +456,79 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://raw.githubusercontent.com/1073015375/PicGo/master/img/D011876F-7489-49FA-A418-65F4CA49ECD6.png" alt><br>My heart’s been borrowed.<br>And yours has been blue.<br>All’s well that ends well.<br>To end up with you.</p>
- <a id="more"></a>
+                <p>安卓课上讲的数据库基本操作</p>
+<a id="more"></a>
 
-<h2 id="本片目录"><a href="#本片目录" class="headerlink" title="本片目录"></a>本片目录</h2><blockquote>
-<blockquote>
-<ul>
-<li><p>前言</p>
-</li>
-<li><p>博客意义 </p>
-</li>
-<li><p>所需工具</p>
-</li>
-<li><p>未来发展</p>
-</li>
-<li><p>小广告</p>
-</li>
-</ul>
-</blockquote>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li><p>2019-07-31，个人博客正式建立，中途一度面临许多困难，使用hugo建站失败，删了3次github仓库，现如今终于平稳运行！</p>
-</li>
-<li><p>本博客基于hexo+github建立，再之后的篇幅中将详细介绍如何使用它们建立博客，敬请期待！</p>
-<hr align="center" width="color=#9DB3B3" size="1.5">
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>主要用“表”来储存：行、列</p>
+<p>学生表（学号，姓名，性别，出生日期等都是一列）</p>
+<p>主流：“SQL“ 语言</p>
+<p>表： 创建 增，删，</p>
+<pre><code># 创建
+create table tb_user(id integer primary key not null,username varchar (20),password char(6))
+#插入
+insert into tb_user(id,username,password)   
+              values(1,&quot;admin&quot;,&quot;123456&quot;)    #一一对应
+Or
 
-</li>
-</ul>
-<h2 id="博客的意义"><a href="#博客的意义" class="headerlink" title="博客的意义"></a>博客的意义</h2><ul>
-<li><p>我在一次刷B站的时候，通过偶然的机会了解到博客的概念。UP说到，博客对于程序猿是很有必要的，通过博客，你可以让大家得以分享到你的技术、新知识。对于新人来说，博客可以巩固自身的知识，同时在未来面试，博客能为你加分不少！</p>
-</li>
-<li><p>博客不一定都很深，都很有技术，新手依旧可以运行自己的专属博客，且越早越好。</p>
-</li>
-<li><p>博客也同时可作为笔记使用，通过对比曾经写过的文章，得以温故而知新。并且博客也逐渐成为程序猿的名片，通过访问他人博客空间，我可以了解到他的独特理解，学习到新的技术和方法。</p>
-<hr align="center" width="color=#9DB3B3" size="1.5">
+insert into tb_user values(1,&quot;admin&quot;,&quot;123456&quot;)
 
-</li>
-</ul>
-<h2 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h2><blockquote>
-<h3 id="本博客基于hexo-github建立"><a href="#本博客基于hexo-github建立" class="headerlink" title="本博客基于hexo+github建立"></a><em>本博客基于<strong>hexo+github</strong>建立</em></h3><blockquote>
-<p><em>以下工具中，！表示必须，?为可选</em></p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>！ node.js  （新手，目前该工具实际作用不明确）</p>
-</li>
-<li><p>！ git      （必要掌握基础语法）</p>
-</li>
-<li><p>！ github账户 （博客内容托管在github仓库中）</p>
-</li>
-<li><p>？ MWeb    （编写博客文章，本篇即使用该软件）</p>
-</li>
-<li><p>？  Typora   (现编写文章所用软件，贫穷，用不起MWeb)</p>
-</li>
-<li><p>？ VS Code     (修改博客内容，且自带终端，可快速更新客）</p>
-</li>
-<li><p>？ 阿里云     （opes.top域名所购处）</p>
-</li>
-<li><p>待更新…….</p>
-<hr align="center" width="color=#9DB3B3" size="1.5">
+# 修改
+update tb_user set password=&quot;666666&quot;
+#修改条件  where 
+where id=2;                                #修改id为2的密码为“666666”
+#删除
+delete from tb_user where id=1;            #删除id=1的
 
-</li>
-</ul>
-<h2 id="未来发展"><a href="#未来发展" class="headerlink" title="未来发展"></a>未来发展</h2><ul>
-<li><p>持续更新文章，美化博客内容</p>
-</li>
-<li><p>推广博客</p>
-</li>
-</ul>
-<h2 id="小广告："><a href="#小广告：" class="headerlink" title="小广告："></a>小广告：</h2><blockquote>
-<p><a href="https://space.bilibili.com/19412606" target="_blank" rel="noopener">BiliBili个人空间</a><br>QQ：1073015375<br>E-Mail：<a href="mailto:1073015375@qq.com" target="_blank" rel="noopener">1073015375@qq.com</a></p>
-</blockquote>
+# 单表查询
+#查询用户表中的全部用户（不设条件）
+select id,username,passrord from tb_user
+#如果查询的是表中全部字段的值，可以用“*”代替字段列表
+select * from tb_user
+#查询用户表中所有用户的用户和密码
+select username,password from tb_user
 
+#查询所有单价超过20元的图书的信息（设条件）
+select * from tb_books where book_price&gt;20
+#查询所有以“java”开头的图书的信息
+select * from tb_books where book_name like &quot;java%&quot; 
+#查询条件：名字中间带“文” 的用户
+select * from tb_user where username like &quot;%文%&quot;  
+#查询叫“XX鹏”的男同学
+select * from tb_student where name like &quot;%鹏&quot; and sex=&#39;男&#39;
+#查询学生表中通信专业和软件工程专业的学生信息
+select * from tb_student where  major=&quot;通信专业&quot; or major=&quot;软件工程专业&quot; and sex=&quot;男&quot;
+select * from tb_student where  in(&quot;通信专业&quot;,&quot;软件工程专业&quot;) and sex=&quot;男&quot;
+
+#多表查询
+tb_user(id,username,password)                                #用户表
+tb_user_details(id,name,nickname,sex,phone,qq,email,dept_id) #用户详情表
+tb_dept(dept_id,dept_name,dept_major,dept_telephone)         #该用户部门
+#查询用户名为admin的用户全部信息(三张表的连接查询)
+select id,username,name,nickname,sex,phone,qq,email,dept_name from tb_user,tb_user_details,tb_dept where tb_user.id=tb_user_details.dept_id and tb_user_datails.dept_id=tb_dept.dept_id and username=&quot;admin&quot;
+#所有男同志所在的部门
+select dept_name from tb_user_details,tb_dept where tb_user_details.sex=&quot;男&quot; and tb_user_details.dept_id=tb_dept.dept_id</code></pre><p>图书表：bookId or book_Id.   book_name,book_auther,book_publisher,book_price</p>
+<pre><code>create table tb_books(book_id int(4) not null primary key,
+​                     book_name varchar(50),
+​                     book_author varchar(20),
+​                     book_publisher varchar(50),
+​                     book_price double(6,2),        #6：长度 2:保留小数点后两位数
+                      book_memo text(2000))     
+insert into tb_books(book_id,book_name,book_author,book_publisher,book_price)
+values(1001,&quot;Java程序设计&quot;,&quot;张三&quot;,&quot;清华大学出版社&quot;,35.50)
+
+update tb_books set book_author=&quot;张三丰&quot;
+where book_id=1001;    
+
+delete from tb_books where book_id=1001;            
+
+
+
+</code></pre><ol>
+<li>建立一个数据库</li>
+<li>建两个表tb_user,tb_user_detail</li>
+<li>写一个API访问接口类，在该类中实现增，删，改，查tb_user</li>
+</ol>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2>
             </div>
             <hr/>
 
@@ -661,7 +668,7 @@
                     </span>
                     <a href="http://www.lover.run" class="b-link-green">Lover</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/markdown/firstpost/" class="b-link-green">首篇：建立博客有感及未来发展</a>
+                    <a href="/bi-ji/sjk/" class="b-link-green">数据库原理</a>
                 </p>
             </div>
         </div>
@@ -686,32 +693,33 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/markdown/next-theme/">
+                <a href="/software/androidstudio/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo-NexT安装和优化教程（持续更新～）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Android Studio安装到连接模拟器">
                         
-                        <span class="card-title">Hexo-NexT安装和优化教程（持续更新～）</span>
+                        <span class="card-title">Android Studio安装到连接模拟器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">
-本教程参考了NexT官方中文文档以及收集了一些他人博客的内容，并加以整合。在文章下将依次标明地址。 
-前排提醒
-为了主题设置更加简便，推荐使用VS Code进行主题代码的更新
+这篇含水量极大，不用看啦。
 
-同时 Mac 终端输入sudo su进入root用户， Wi</div>
+
+
+前言
+若不知道如何安装jdk，请点击这里java环境配置以及软件下载（eclipse或idea）详细教程。这里为详细教程（一定要下载64位，现在不管什么软件，都下载64位，电脑还是32位的建议收藏，毕竟是</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-09
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
+                            <a href="/categories/SoftWare/" class="post-category" target="_blank">
+                                    SoftWare
                                 </a>
                             
                             
@@ -721,12 +729,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/教程/" target="_blank">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/SoftWare/" target="_blank">
+                        <span class="chip bg-color">SoftWare</span>
                     </a>
                     
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/教程/" target="_blank">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
@@ -740,31 +748,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/markdown/hello-world/">
+                <a href="/software/picgo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Hexo使用教程">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="PicGo+GitHub-一款方便的图床工具">
                         
-                        <span class="card-title">Hexo使用教程</span>
+                        <span class="card-title">PicGo+GitHub-一款方便的图床工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">当你部署完博客后，是不是不知道后面该怎么操作呢？我该怎么才能上传新的博客呢？点击这里
+                    <div class="summary">PicGo目前可谓最为流行的图床工具，本教程包含PicGo关联你的GitHub（其它服务器也可，详细请点击阅读）
 
 
 
-Hexo官网点击这里Hexo官网，在官网有详细的教程，如果以后有问题，可以优先查看官方文档。&lt;HR align=center width= c</div>
+PicGo介绍文字说明PicGo一个多功能、便捷、且持续更新图床工具。Picgo可以关联到你的图片上传的服务器/网站上，</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
+                            <a href="/categories/SoftWare/" class="post-category" target="_blank">
+                                    SoftWare
                                 </a>
                             
                             
@@ -774,12 +782,12 @@ Hexo官网点击这里Hexo官网，在官网有详细的教程，如果以后有
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/教程/" target="_blank">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/SoftWare/" target="_blank">
+                        <span class="chip bg-color">SoftWare</span>
                     </a>
                     
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/教程/" target="_blank">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
