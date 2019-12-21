@@ -163,7 +163,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, rgb(81, 49, 133) 0%,  rgb(236, 116, 142) 100%);
 }
 
 @-webkit-keyframes rainbow {
